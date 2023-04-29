@@ -1,3 +1,7 @@
+let playerWinCount = 0;
+let computerWinCount = 0;
+let tieCount = 0;
+
 for (i = 0; i < 5; i++){
 
 /* get computer choice and assign numeric value */
@@ -18,12 +22,18 @@ let whoWon = (playerChoice - getComputerChoice)
 
 let message = (whoWon == 1 || whoWon == -2)? `You win! ${playerSelection} beats ${computerSelection}!`: (whoWon == 0)? `It's a tie!`: (whoWon == -1 || whoWon == 2)? `You lose! ${computerSelection} beats ${playerSelection}!`: "error";
 
+(whoWon == 1 || whoWon == -2)? playerWinCount++ : (whoWon == 0)? tieCount++ : (whoWon == -1 || whoWon == 2)? computerWinCount++ : "error";
 
 console.log(computerSelection)
 console.log(message)
+console.log(playerWinCount)
+console.log(tieCount)
+console.log(computerWinCount)
+
 
 /* display win/lose message and tally wins/losses */
 alert(message);
 
-
 }
+
+/* tally total wins/losses and display winner */

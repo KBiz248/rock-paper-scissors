@@ -1,3 +1,4 @@
+/* these come in handy towards the end, but need to be assigned outside of and before the loop */
 let playerWinCount = 0;
 let computerWinCount = 0;
 let tieCount = 0;
@@ -17,22 +18,22 @@ console.log(playerSelection)
 console.log(playerChoice)
 
 /* perform function to determine the winner */
+let whoWon = (playerChoice - getComputerChoice) 
+
+/* display win/lose message and tally wins/losses */
 let computerSelection = (getComputerChoice == 1)? "rock": (getComputerChoice == 2)? "paper": (getComputerChoice == 3)? "scissors": "error";
-let whoWon = (playerChoice - getComputerChoice)
 
 let message = (whoWon == 1 || whoWon == -2)? `You win! ${playerSelection} beats ${computerSelection}!`: (whoWon == 0)? `It's a tie!`: (whoWon == -1 || whoWon == 2)? `You lose! ${computerSelection} beats ${playerSelection}!`: "error";
 
 (whoWon == 1 || whoWon == -2)? playerWinCount++ : (whoWon == 0)? tieCount++ : (whoWon == -1 || whoWon == 2)? computerWinCount++ : "error";
+
+alert(message);
 
 console.log(computerSelection)
 console.log(message)
 console.log(playerWinCount)
 console.log(tieCount)
 console.log(computerWinCount)
-
-
-/* display win/lose message and tally wins/losses */
-alert(message);
 
 }
 

@@ -2,6 +2,7 @@
 let playerWinCount = 0;
 let computerWinCount = 0;
 let tieCount = 0;
+let canceled = false;
 
 for (i = 0; i < 5; i++){
 
@@ -16,7 +17,7 @@ console.log(getComputerChoice)
 /* prompt user for choice and assign numeric value */
 let playerSelection = prompt("Rock, Paper, or Scissors?")
 
-if (playerSelection == null){alert("Fine. I didn't want to play anyway."); break} // displays exit message and breaks loop if player selects cancel
+if (playerSelection == null){canceled = true; alert("Fine. I didn't want to play anyway."); break} // displays exit message and breaks loop if player selects cancel
 
 let playerChoice = (playerSelection.toLowerCase() == "rock")? 1: (playerSelection.toLowerCase() == "paper")? 2: (playerSelection.toLowerCase() == "scissors")? 3: "error";
 
@@ -47,4 +48,4 @@ console.log(computerWinCount)
 
 let gameMessage = (playerWinCount > computerWinCount)? `You win! Final score: ${playerWinCount} to ${computerWinCount}` : (computerWinCount > playerWinCount)? `You lose! Final score: ${playerWinCount} to ${computerWinCount}` : `It's a tie! Final score: ${playerWinCount} to ${computerWinCount}`;
 
-(playerWinCount == 0 && computerWinCount == 0 && tieCount !== 5)? "": alert(gameMessage);
+(canceled == true)? "": alert(gameMessage);

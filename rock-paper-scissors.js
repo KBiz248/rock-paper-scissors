@@ -3,10 +3,10 @@ let playerWinCount = 0;
 let computerWinCount = 0;
 let tieCount = 0;
 
-for (i = 0; i < 5; i++){{
+for (i = 0; i < 5; i++){
 
 /* to play first to five wins (instead of just five rounds), comment out the above for loop and uncomment the below while loop */
-//while (playerWinCount < 5 && computerWinCount < 5){{
+//while (playerWinCount < 5 && computerWinCount < 5){
 
 /* get computer choice and assign numeric value */
 let getComputerChoice = (Math.random() <= (1/3))? 1: (Math.random() <= (2/3))? 2: (Math.random() <= 1)? 3: "error";
@@ -47,5 +47,4 @@ console.log(computerWinCount)
 
 let gameMessage = (playerWinCount > computerWinCount)? `You win! Final score: ${playerWinCount} to ${computerWinCount}` : (computerWinCount > playerWinCount)? `You lose! Final score: ${playerWinCount} to ${computerWinCount}` : `It's a tie! Final score: ${playerWinCount} to ${computerWinCount}`;
 
-alert(gameMessage);
-}
+(playerWinCount == 0 && computerWinCount == 0 && tieCount !== 5)? "": alert(gameMessage);

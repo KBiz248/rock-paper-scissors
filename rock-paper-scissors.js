@@ -5,6 +5,9 @@ let tieCount = 0;
 
 for (i = 0; i < 5; i++){
 
+/* to play first to five wins (instead of just five rounds), comment out the above for loop and uncomment the below while loop */
+//while (playerWinCount < 5 && computerWinCount < 5){
+
 /* get computer choice and assign numeric value */
 let getComputerChoice = (Math.random() <= (1/3))? 1: (Math.random() <= (2/3))? 2: (Math.random() <= 1)? 3: "error";
 

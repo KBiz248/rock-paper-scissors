@@ -16,8 +16,7 @@ console.log(getComputerChoice)
 /* prompt user for choice and assign numeric value */
 let playerSelection = prompt("Rock, Paper, or Scissors?")
 
-/* displays exit message and breaks loop if player selects cancel */
-if (playerSelection == null){alert("Fine. I didn't want to play anyway."); break}
+if (playerSelection == null){alert("Fine. I didn't want to play anyway."); break} // displays exit message and breaks loop if player selects cancel
 
 let playerChoice = (playerSelection.toLowerCase() == "rock")? 1: (playerSelection.toLowerCase() == "paper")? 2: (playerSelection.toLowerCase() == "scissors")? 3: "error";
 

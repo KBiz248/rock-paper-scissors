@@ -38,3 +38,7 @@ console.log(computerWinCount)
 }
 
 /* tally total wins/losses and display winner */
+
+let gameMessage = (playerWinCount > computerWinCount)? `You win! Final score: ${playerWinCount} to ${computerWinCount}` : (computerWinCount > playerWinCount)? `You lose! Final score: ${playerWinCount} to ${computerWinCount}` : `It's a tie! Final score: ${playerWinCount} to ${computerWinCount}`;
+
+alert(gameMessage);
